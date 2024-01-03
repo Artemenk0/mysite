@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Froganas|AirDrop</title>
+    <link rel="icon" href="Img/Union (5).png" type="image/png">    
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="wrapper">
+
+            <div class="header_logo">
+                <a href="https://www.sniper.xyz/collection/froganas" class="header_logo_link">
+                    <img src="Img/Union (5).png" alt="Froganas" class="header_logo_pic">
+                </a>
+            </div>
+    
+            <div class="headerx_logo">
+                <a href="https://twitter.com/ThinTallTee" class="headerx_logo_link">
+                    <img src="Img/Union (6).png" alt="Froganas" class="headerx_logo_pic">
+                </a>
+            </div>    
+            
+            <button type="submit" class="connect_button"></button>
+                
+           
+        </div>
+    </header>
+    <div class="main_wrapper">
+        <!-- Timer -->
+        <div class="timer">
+            <p id="timer_text">00h 00m 00s</p>
+        </div>
+
+        <!-- Tape -->
+        <div class="image_tape">
+            <div class="show_zone">
+                <div class="picture_box">
+                    <span>
+                        <img src="Img/NFT/0 (1).jpg" alt="">
+                        <img src="Img/NFT/0 (2).jpg" alt="">
+                        <img src="Img/NFT/0 (3).jpg" alt="">
+                        <img src="Img/NFT/0 (4).jpg" alt="">
+                    </span>
+                    <span>
+                        <img src="Img/NFT/0 (5).jpg" alt="">
+                        <img src="Img/NFT/0 (6).jpg" alt="">
+                        <img src="Img/NFT/0 (7).jpg" alt="">
+                        <img src="Img/NFT/0 (8).jpg" alt="">
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="claim_button"></button>
+    </div>
+
+<script>
+    
+    let date = new Date("Jan 26 2024 00:00:00");// CHANGE DATE
+
+    function counts(){
+        let now = new Date();
+        gap = date - now;
+        
+
+        let hours = Math.floor(gap / 1000 / 60 / 60);
+        let minutes = Math.floor(gap / 1000 / 60) % 60;
+        let seconds = Math.floor(gap / 1000) % 60;
+        
+        document.getElementById("timer_text").innerText = hours + "h " + minutes + "m " + seconds + "s";
+    }
+    counts();
+    setInterval(counts, 1000);
+
+</script>
+
+</body>
+</html>
